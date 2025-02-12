@@ -25,6 +25,7 @@ const routes: Routes = [
         (m) => m.ProductsModule
       ),
   },
+  { path: 'forms', loadChildren: () => import('./features/forms/forms.module').then(m => m.FormsModule) },
   { path: '**', redirectTo: 'home' }, // Wildcard route for undefined paths
 ];
 

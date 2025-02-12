@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h2>Dynamic Form</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" />
+        <span *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          Name must be at least 3 characters long
+        </span>
+      </label>
+  
+      <label>
+        Email:
+        <input type="email" formControlName="email" />
+        <span *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          Enter a valid email
+        </span>
+      </label>
+  
+      <div formArrayName="phoneNumbers">
+        <div *ngFor="let phone of phoneNumbers.controls; let i = index">
+          <label>
+            Phone {{ i + 1 }}:
+            <input type="text" [formControlName]="i" />
+            <span *ngIf="phone.invalid && phone.touched">
+              <span *ngIf="phone.errors?.['required']">Phone number is required.</span>
+              <span *ngIf="phone.errors?.['pattern']">Only numeric values are allowed.</span>
+            </span>
+            <button type="button" (click)="removePhoneNumber(i)">Remove</button>
+          </label>
+        </div>
+      </div>
+      
+  
+      <button type="button" (click)="addPhoneNumber()">Add Phone Number</button>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+  </div>
+  
