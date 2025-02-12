@@ -1,0 +1,12 @@
+.route-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .route-container h1 {
+    font-size: 36px;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px #000;
+  }
+  

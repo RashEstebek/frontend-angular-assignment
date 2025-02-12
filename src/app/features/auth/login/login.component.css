@@ -1,0 +1,11 @@
+.route-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .route-container h1 {
+    font-size: 30px;
+    color: #FF5722;
+  }
+  

@@ -1,0 +1,12 @@
+.route-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .route-container h1 {
+    font-size: 32px;
+    color: #3F51B5;
+    text-decoration: underline;
+  }
+  
