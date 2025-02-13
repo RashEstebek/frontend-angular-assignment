@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RxjsDemoComponent } from './shared/rxjs-demo/rxjs-demo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,7 +26,19 @@ const routes: Routes = [
         (m) => m.ProductsModule
       ),
   },
-  { path: 'forms', loadChildren: () => import('./features/forms/forms.module').then(m => m.FormsModule) },
+  {
+    path: 'forms',
+    loadChildren: () =>
+      import('./features/forms/forms.module').then((m) => m.FormsModule),
+  },
+  {
+    path: 'highlight-demo',
+    loadChildren: () =>
+      import('./shared/shared.module').then(
+        (m) => m.SharedModule
+      ),
+  },
+  { path: 'rxjs-demo', component: RxjsDemoComponent },
   { path: '**', redirectTo: 'home' }, // Wildcard route for undefined paths
 ];
 

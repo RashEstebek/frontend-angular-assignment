@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  p {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    width: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+  
