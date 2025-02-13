@@ -3,7 +3,7 @@
   
     <h3>All Products</h3>
     <ul>
-      <li *ngFor="let product of products">{{ product.name }} - ${{ product.price }}</li>
+      <li *ngFor="let product of products; trackBy: trackById">{{ product.name }} - ${{ product.price }}</li>
     </ul>
   
     <h3>Filtered Products (Price > $30)</h3>

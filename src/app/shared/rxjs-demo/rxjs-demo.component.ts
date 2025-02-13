@@ -36,7 +36,12 @@ export class RxjsDemoComponent implements OnInit, OnDestroy {
     );
   }
 
+  trackById(index: number, item: any): number {
+    return item.id; 
+  }
+
   ngOnDestroy(): void {
+
     this.subscriptions.unsubscribe();
   }
 }
